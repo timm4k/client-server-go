@@ -1,0 +1,40 @@
+=== DEVICE LIFECYCLE ===
+
+POST /api/v1/devices -> 201 Created
+Location: /api/v1/devices/dev-f6ba47eb0ebb49de62d7275397000fc8
+{"id":"dev-f6ba47eb0ebb49de62d7275397000fc8","name":"Main Thermal Sensor","ip_address":"192.168.1.50","type":"sensor","status":"online","updated_at":"2026-10-22T20:06:26.2794227Z"}
+
+GET /api/v1/devices/dev-f6ba47eb0ebb49de62d7275397000fc8 -> 200 OK
+{"id":"dev-f6ba47eb0ebb49de62d7275397000fc8","name":"Main Thermal Sensor","ip_address":"192.168.1.50","type":"sensor","status":"online","updated_at":"2026-10-22T20:06:26.2794227Z"}
+
+GET /api/v1/devices -> 200 OK
+[{"id":"dev-f6ba47eb0ebb49de62d7275397000fc8","name":"Main Thermal Sensor","ip_address":"192.168.1.50","type":"sensor","status":"online","updated_at":"2026-10-22T20:06:26.2794227Z"}]
+
+PUT /api/v1/devices/dev-f6ba47eb0ebb49de62d7275397000fc8 -> 200 OK
+{"id":"dev-f6ba47eb0ebb49de62d7275397000fc8","name":"Main Thermal Sensor v2","ip_address":"192.168.1.51","type":"sensor","status":"offline","updated_at":"2026-10-22T20:06:26.3967488Z"}
+
+DELETE /api/v1/devices/dev-f6ba47eb0ebb49de62d7275397000fc8 -> 204 No Content
+
+GET /api/v1/devices/dev-f6ba47eb0ebb49de62d7275397000fc8 -> 404 Not Found
+Device not found
+
+=== VALIDATION AND MISSING RESOURCES ===
+
+POST /api/v1/devices -> 400 Bad Request
+Required fields: name, ip_address, type
+
+POST /api/v1/devices -> 400 Bad Request
+Invalid JSON request body
+
+POST /api/v1/devices -> 400 Bad Request
+ip_address must be a valid IPv4 or IPv6 address
+
+PUT /api/v1/devices/unknown-device -> 404 Not Found
+Device not found
+
+DELETE /api/v1/devices/unknown-device -> 404 Not Found
+Device not found
+
+[PASS] CRUD lifecycle, validation and missing-resource checks completed
+
+Exit code: 0

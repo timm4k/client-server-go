@@ -1,0 +1,26 @@
+HTTP/1.1 201 Created
+Content-Type: application/json
+Location: /api/v1/devices/dev-7f884f2d3be6b5244be447ff9660c68b
+Date: Thu, 22 Oct 2026 20:10:09 GMT
+Content-Length: 170
+
+{"id":"dev-7f884f2d3be6b5244be447ff9660c68b","name":"Curl Sensor","ip_address":"127.0.0.1","type":"sensor","status":"online","updated_at":"2026-10-22T20:10:09.4003921Z"}
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Thu, 22 Oct 2026 20:10:09 GMT
+Content-Length: 170
+
+{"id":"dev-7f884f2d3be6b5244be447ff9660c68b","name":"Curl Sensor","ip_address":"127.0.0.1","type":"sensor","status":"online","updated_at":"2026-10-22T20:10:09.4003921Z"}
+
+HTTP/1.1 204 No Content
+Date: Thu, 22 Oct 2026 20:10:09 GMT
+
+
+HTTP/1.1 404 Not Found
+Content-Type: text/plain; charset=utf-8
+X-Content-Type-Options: nosniff
+Date: Thu, 22 Oct 2026 20:10:09 GMT
+Content-Length: 17
+
+Device not found

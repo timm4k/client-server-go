@@ -1,0 +1,14 @@
+23:06:25 [SERVER] In-memory device repository ready | sync.RWMutex enabled
+23:06:25 [SERVER] Chi routes: /api/v1/devices | GET, POST, PUT, DELETE
+23:06:25 [SERVER] Listening at http://127.0.0.1:8080 | HTTP request logging enabled
+23:06:26 [HTTP] method=POST path="/api/v1/devices" status=201 duration=1.8261ms remote="127.0.0.1:63915"
+23:06:26 [HTTP] method=GET path="/api/v1/devices/dev-f6ba47eb0ebb49de62d7275397000fc8" status=200 duration=0s remote="127.0.0.1:63915"
+23:06:26 [HTTP] method=GET path="/api/v1/devices" status=200 duration=0s remote="127.0.0.1:63915"
+23:06:26 [HTTP] method=PUT path="/api/v1/devices/dev-f6ba47eb0ebb49de62d7275397000fc8" status=200 duration=0s remote="127.0.0.1:63915"
+23:06:26 [HTTP] method=DELETE path="/api/v1/devices/dev-f6ba47eb0ebb49de62d7275397000fc8" status=204 duration=0s remote="127.0.0.1:63915"
+23:06:26 [HTTP] method=GET path="/api/v1/devices/dev-f6ba47eb0ebb49de62d7275397000fc8" status=404 duration=0s remote="127.0.0.1:63915"
+23:06:26 [HTTP] method=POST path="/api/v1/devices" status=400 duration=0s remote="127.0.0.1:63915"
+23:06:26 [HTTP] method=POST path="/api/v1/devices" status=400 duration=0s remote="127.0.0.1:63915"
+23:06:26 [HTTP] method=POST path="/api/v1/devices" status=400 duration=0s remote="127.0.0.1:63915"
+23:06:26 [HTTP] method=PUT path="/api/v1/devices/unknown-device" status=404 duration=0s remote="127.0.0.1:63915"
+23:06:26 [HTTP] method=DELETE path="/api/v1/devices/unknown-device" status=404 duration=0s remote="127.0.0.1:63915"

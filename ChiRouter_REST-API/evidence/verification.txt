@@ -1,0 +1,57 @@
+go test -race -count=1 -v ./...: PASS, exit code 0
+go vet ./...: PASS
+go mod verify: all modules verified
+gofmt -l .: no files listed
+go build -race -o F:/Dev/toolchains/temp/device-registry.exe ./cmd/server: PASS
+Live HTTP check_api.ps1: PASS, exit code 0
+curl.exe: POST 201, GET 200, DELETE 204, GET after delete 404
+Server race detector: no WARNING: DATA RACE observed
+Source: English only, no code comments
+
+Project review after moving the entry point to server/main.go
+go test -race -count=1 -v ./...: PASS
+go vet ./...: PASS
+go mod verify: all modules verified
+gofmt -l .: no files listed
+go build -race -o F:/Dev/toolchains/temp/device-registry-review.exe ./server: PASS
+Live HTTP check at 127.0.0.1:18080: exit code 0
+=== DEVICE LIFECYCLE ===
+
+POST /api/v1/devices -> 201 Created
+Location: /api/v1/devices/dev-5e717cafc8975a457b6fbfb083353aa0
+{"id":"dev-5e717cafc8975a457b6fbfb083353aa0","name":"Main Thermal Sensor","ip_address":"192.168.1.50","type":"sensor","status":"online","updated_at":"2026-10-22T20:25:16.9146043Z"}
+
+GET /api/v1/devices/dev-5e717cafc8975a457b6fbfb083353aa0 -> 200 OK
+{"id":"dev-5e717cafc8975a457b6fbfb083353aa0","name":"Main Thermal Sensor","ip_address":"192.168.1.50","type":"sensor","status":"online","updated_at":"2026-10-22T20:25:16.9146043Z"}
+
+GET /api/v1/devices -> 200 OK
+[{"id":"dev-5e717cafc8975a457b6fbfb083353aa0","name":"Main Thermal Sensor","ip_address":"192.168.1.50","type":"sensor","status":"online","updated_at":"2026-10-22T20:25:16.9146043Z"}]
+
+PUT /api/v1/devices/dev-5e717cafc8975a457b6fbfb083353aa0 -> 200 OK
+{"id":"dev-5e717cafc8975a457b6fbfb083353aa0","name":"Main Thermal Sensor v2","ip_address":"192.168.1.51","type":"sensor","status":"offline","updated_at":"2026-10-22T20:25:17.0229639Z"}
+
+DELETE /api/v1/devices/dev-5e717cafc8975a457b6fbfb083353aa0 -> 204 No Content
+
+GET /api/v1/devices/dev-5e717cafc8975a457b6fbfb083353aa0 -> 404 Not Found
+Device not found
+
+=== VALIDATION AND MISSING RESOURCES ===
+
+POST /api/v1/devices -> 400 Bad Request
+Required fields: name, ip_address, type
+
+POST /api/v1/devices -> 400 Bad Request
+Invalid JSON request body
+
+POST /api/v1/devices -> 400 Bad Request
+ip_address must be a valid IPv4 or IPv6 address
+
+PUT /api/v1/devices/unknown-device -> 404 Not Found
+Device not found
+
+DELETE /api/v1/devices/unknown-device -> 404 Not Found
+Device not found
+
+[PASS] CRUD lifecycle, validation and missing-resource checks completed
+
+Server stderr:

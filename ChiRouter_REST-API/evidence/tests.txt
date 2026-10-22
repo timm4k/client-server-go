@@ -1,0 +1,34 @@
+?   	deviceregistry/cmd/server	[no test files]
+?   	deviceregistry/internal/domain	[no test files]
+=== RUN   TestDeviceLifecycle
+--- PASS: TestDeviceLifecycle (0.00s)
+=== RUN   TestInvalidRequests
+=== RUN   TestInvalidRequests/malformed
+=== RUN   TestInvalidRequests/missing-fields
+=== RUN   TestInvalidRequests/blank-name
+=== RUN   TestInvalidRequests/invalid-ip
+=== RUN   TestInvalidRequests/invalid-status
+=== RUN   TestInvalidRequests/extra-json
+=== RUN   TestInvalidRequests/client-controlled-id
+=== RUN   TestInvalidRequests/oversized
+--- PASS: TestInvalidRequests (0.03s)
+    --- PASS: TestInvalidRequests/malformed (0.00s)
+    --- PASS: TestInvalidRequests/missing-fields (0.00s)
+    --- PASS: TestInvalidRequests/blank-name (0.00s)
+    --- PASS: TestInvalidRequests/invalid-ip (0.00s)
+    --- PASS: TestInvalidRequests/invalid-status (0.00s)
+    --- PASS: TestInvalidRequests/extra-json (0.00s)
+    --- PASS: TestInvalidRequests/client-controlled-id (0.00s)
+    --- PASS: TestInvalidRequests/oversized (0.02s)
+=== RUN   TestConcurrentHTTPRequests
+--- PASS: TestConcurrentHTTPRequests (0.02s)
+PASS
+ok  	deviceregistry/internal/handler	1.127s
+=== RUN   TestRepositoryLifecycle
+--- PASS: TestRepositoryLifecycle (0.00s)
+=== RUN   TestConcurrentRepositoryAccess
+--- PASS: TestConcurrentRepositoryAccess (0.01s)
+PASS
+ok  	deviceregistry/internal/repository	1.065s
+
+Exit code: 0
