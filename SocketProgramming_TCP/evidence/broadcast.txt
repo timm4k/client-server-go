@@ -1,0 +1,39 @@
+=== LEVEL 2: BROADCAST AND THREE INDEPENDENT CLIENTS ===
+[A] Connected | Local address: 127.0.0.1:64951
+[A] << [SERVER] Welcome to Device & Dispatcher Gateway
+[A] << [SERVER] Commands: ECHO <text>, TIME, CLOSE, QUIT, BROADCAST <text>, MSG <text>
+[B] Connected | Local address: 127.0.0.1:64952
+[B] << [SERVER] Welcome to Device & Dispatcher Gateway
+[B] << [SERVER] Commands: ECHO <text>, TIME, CLOSE, QUIT, BROADCAST <text>, MSG <text>
+[A] << [SYSTEM] Client joined: 127.0.0.1:64952
+[C] Connected | Local address: 127.0.0.1:64755
+[C] << [SERVER] Welcome to Device & Dispatcher Gateway
+[C] << [SERVER] Commands: ECHO <text>, TIME, CLOSE, QUIT, BROADCAST <text>, MSG <text>
+[A] << [SYSTEM] Client joined: 127.0.0.1:64755
+[B] << [SYSTEM] Client joined: 127.0.0.1:64755
+[A] >> BROADCAST sensor online
+[A] << [SERVER] Broadcast delivered to 2 clients
+[B] << [MESSAGE from 127.0.0.1:64951]: sensor online
+[C] << [MESSAGE from 127.0.0.1:64951]: sensor online
+[B] >> MSG dispatcher ready
+[B] << [SERVER] Broadcast delivered to 2 clients
+[A] << [MESSAGE from 127.0.0.1:64952]: dispatcher ready
+[C] << [MESSAGE from 127.0.0.1:64952]: dispatcher ready
+[C] >> QUIT
+[C] << [SERVER] Goodbye
+[C] Connection closed by server
+[A] << [SYSTEM] Client left: 127.0.0.1:64755
+[B] << [SYSTEM] Client left: 127.0.0.1:64755
+[A] >> MSG remaining clients
+[A] << [SERVER] Broadcast delivered to 1 client
+[B] << [MESSAGE from 127.0.0.1:64951]: remaining clients
+[A] >> CLOSE
+[A] << [SERVER] Goodbye
+[A] Connection closed by server
+[B] << [SYSTEM] Client left: 127.0.0.1:64951
+[B] >> QUIT
+[B] << [SERVER] Goodbye
+[B] Connection closed by server
+[PASS] broadcast scenario
+
+Exit code: 0

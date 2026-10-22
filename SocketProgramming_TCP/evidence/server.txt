@@ -1,0 +1,17 @@
+21:35:46 === Device & Dispatcher Gateway | TCP | Levels 1 and 2 ===
+21:35:46 [SERVER] TCP listener ready at 127.0.0.1:9000
+21:35:49 [CONNECT] 127.0.0.1:50944 | Active clients: 1
+21:35:49 [CONNECT] 127.0.0.1:52712 | Active clients: 2
+21:35:49 [DISCONNECT] 127.0.0.1:50944 | Active clients: 1
+21:35:49 [DISCONNECT] 127.0.0.1:52712 | Active clients: 0
+21:35:50 [CONNECT] 127.0.0.1:64951 | Active clients: 1
+21:35:50 [CONNECT] 127.0.0.1:64952 | Active clients: 2
+21:35:50 [CONNECT] 127.0.0.1:64755 | Active clients: 3
+21:35:50 [BROADCAST] From 127.0.0.1:64951 | Recipients: 2 | Message: sensor online
+21:35:51 [BROADCAST] From 127.0.0.1:64952 | Recipients: 2 | Message: dispatcher ready
+21:35:51 [DISCONNECT] 127.0.0.1:64755 | Active clients: 2
+21:35:51 [BROADCAST] From 127.0.0.1:64951 | Recipients: 1 | Message: remaining clients
+21:35:51 [DISCONNECT] 127.0.0.1:64951 | Active clients: 1
+21:35:51 [DISCONNECT] 127.0.0.1:64952 | Active clients: 0
+21:35:51 [CONNECT] 127.0.0.1:62954 | Active clients: 1
+21:35:51 [DISCONNECT] 127.0.0.1:62954 | Active clients: 0

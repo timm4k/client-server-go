@@ -1,0 +1,11 @@
+Server build: go build -race -o F:\Dev\toolchains\temp\dispatcher-server-race.exe ./cmd/server
+Server run: F:\Dev\toolchains\temp\dispatcher-server-race.exe
+Commands scenario: PASS
+Broadcast scenario: PASS
+Interactive client: PASS
+Server stderr: empty
+Race warnings: none in recorded scenarios
+go vet ./...: PASS
+Client input handling: PASS
+Scanner error handling: PASS
+gopls check cmd/client/main.go: PASS

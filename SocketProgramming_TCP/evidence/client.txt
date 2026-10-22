@@ -1,0 +1,7 @@
+[CLIENT] Connected to 127.0.0.1:9000 | Local address: 127.0.0.1:62954
+[SERVER] Welcome to Device & Dispatcher Gateway
+[SERVER] Commands: ECHO <text>, TIME, CLOSE, QUIT, BROADCAST <text>, MSG <text>
+[ECHO]: console client check
+[SERVER] Goodbye
+[CLIENT] Connection closed
+Exit code: 0

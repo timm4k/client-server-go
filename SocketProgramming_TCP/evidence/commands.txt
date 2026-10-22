@@ -1,0 +1,24 @@
+=== LEVEL 1: COMMANDS AND TWO INDEPENDENT CLIENTS ===
+[A] Connected | Local address: 127.0.0.1:50944
+[A] << [SERVER] Welcome to Device & Dispatcher Gateway
+[A] << [SERVER] Commands: ECHO <text>, TIME, CLOSE, QUIT, BROADCAST <text>, MSG <text>
+[B] Connected | Local address: 127.0.0.1:52712
+[B] << [SERVER] Welcome to Device & Dispatcher Gateway
+[B] << [SERVER] Commands: ECHO <text>, TIME, CLOSE, QUIT, BROADCAST <text>, MSG <text>
+[A] << [SYSTEM] Client joined: 127.0.0.1:52712
+[A] >> ECHO device online
+[A] << [ECHO]: device online
+[B] >> TIME
+[B] << [TIME]: 2026-10-22T21:35:49+03:00
+[A] >> UNKNOWN
+[A] << [ERROR] Unknown command. Available commands: ECHO <text>, TIME, CLOSE, QUIT, BROADCAST <text>, MSG <text>
+[A] >> CLOSE
+[A] << [SERVER] Goodbye
+[A] Connection closed by server
+[B] << [SYSTEM] Client left: 127.0.0.1:50944
+[B] >> QUIT
+[B] << [SERVER] Goodbye
+[B] Connection closed by server
+[PASS] commands scenario
+
+Exit code: 0
