@@ -1,0 +1,5 @@
+[CLIENT] Gateway: 127.0.0.1:8443 | Minimum TLS: 1.3 | Client certificate: false
+[CLIENT] Alert: CRITICAL_ERROR: Database connection timeout on node-04
+[ERROR] receive confirmation: remote error: tls: certificate required
+exit status 1
+Exit code: 1

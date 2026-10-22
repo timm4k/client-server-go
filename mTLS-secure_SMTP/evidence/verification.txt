@@ -1,0 +1,10 @@
+PKI generation: PASS
+Authorized mTLS client: PASS
+Client without certificate: REJECTED
+Mailpit messages after both attempts: 1
+Email From, To, Subject, incident and timestamp: PASS
+Gateway built with -race: PASS
+Race warnings in gateway stderr: none
+go vet ./...: PASS
+gopls check: PASS
+Mailpit version: v1.31.6

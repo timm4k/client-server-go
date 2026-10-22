@@ -1,0 +1,7 @@
+[PKI] Local Root CA generated: ca.crt, ca.key
+[PKI] Server certificate generated: server.crt, server.key
+[PKI] Server SAN: localhost, 127.0.0.1, ::1
+[PKI] Client certificate generated: client.crt, client.key
+[PKI] Client CN: dispatcher-agent-01
+[PKI] Certificate directory: certs
+Exit code: 0

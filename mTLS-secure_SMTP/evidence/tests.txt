@@ -1,0 +1,27 @@
+?   	securealert/certgen	[no test files]
+?   	securealert/client	[no test files]
+?   	securealert/email	[no test files]
+=== RUN   TestVerifiedAlertDispatch
+--- PASS: TestVerifiedAlertDispatch (0.02s)
+=== RUN   TestRejectUnverifiedConnections
+=== RUN   TestRejectUnverifiedConnections/no-client-certificate
+=== RUN   TestRejectUnverifiedConnections/foreign-client-certificate
+=== RUN   TestRejectUnverifiedConnections/wrong-server-name
+=== RUN   TestRejectUnverifiedConnections/expired-certificates
+--- PASS: TestRejectUnverifiedConnections (0.03s)
+    --- PASS: TestRejectUnverifiedConnections/no-client-certificate (0.01s)
+    --- PASS: TestRejectUnverifiedConnections/foreign-client-certificate (0.01s)
+    --- PASS: TestRejectUnverifiedConnections/wrong-server-name (0.00s)
+    --- PASS: TestRejectUnverifiedConnections/expired-certificates (0.00s)
+=== RUN   TestMTLSOnlyMode
+--- PASS: TestMTLSOnlyMode (0.01s)
+=== RUN   TestSMTPFailureIsReported
+--- PASS: TestSMTPFailureIsReported (0.01s)
+PASS
+ok  	securealert/gateway	1.142s
+=== RUN   TestCertificateChainAndIdentity
+--- PASS: TestCertificateChainAndIdentity (0.01s)
+PASS
+ok  	securealert/pki	1.062s
+?   	securealert/server	[no test files]
+Exit code: 0

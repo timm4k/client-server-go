@@ -1,0 +1,18 @@
+Message-ID: <5sBNOQiV0B4xsn7AghNbu0@mailpit>
+Return-Path: <gateway@internal.net>
+Received: from localhost (unknown [127.0.0.1])
+        by DESKTOP-EMM7LFH (Mailpit) with SMTP
+        for <duty-engineer@internal.net>; Thu, 22 Oct 2026 22:22:49 +0300 (EEST)
+From: <gateway@internal.net>
+To: <duty-engineer@internal.net>
+Subject: Critical incident notification
+Date: Thu, 22 Oct 2026 22:22:49 +0300
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Critical incident notification
+Registered at: 2026-10-22T22:22:49+03:00
+
+Incident: CRITICAL_ERROR: Database connection timeout on node-04
+
